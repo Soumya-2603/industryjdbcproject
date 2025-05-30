@@ -58,13 +58,11 @@ public class IPLController {
         }
      // Delete one player
         int jnoToDelete = 1;
-        boolean isDeleted = iplService.deletePlayer(jnoToDelete);
+        boolean Deleted = iplService.deletePlayer(jnoToDelete);
 
-        if (isDeleted) {
+        if (Deleted) {
             System.out.println("Player with Jno " + jnoToDelete + " deleted successfully.");
-        } else {
-            System.out.println("Failed to delete player with Jno " + jnoToDelete + ".");
-        }
+        } 
         
 		
 		}
