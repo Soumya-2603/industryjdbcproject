@@ -56,6 +56,8 @@ public class IPLController {
                 + ", Wickets: " + player.getWickets()
                 + ", Team: " + player.getTeam());
         }
+        
+        System.out.println();
 		
 		}
 	}
