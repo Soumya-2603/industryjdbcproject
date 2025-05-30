@@ -56,8 +56,16 @@ public class IPLController {
                 + ", Wickets: " + player.getWickets()
                 + ", Team: " + player.getTeam());
         }
+     // Delete one player
+        int jnoToDelete = 1;
+        boolean isDeleted = iplService.deletePlayer(jnoToDelete);
+
+        if (isDeleted) {
+            System.out.println("Player with Jno " + jnoToDelete + " deleted successfully.");
+        } else {
+            System.out.println("Failed to delete player with Jno " + jnoToDelete + ".");
+        }
         
-        System.out.println();
 		
 		}
 	}

@@ -166,7 +166,31 @@ public class IPLDAO {
             e.printStackTrace();
         }
     }
-}
+    public boolean deletePlayerByJno(int jno) {
+        String deleteQuery = "DELETE FROM players WHERE Jerseyno = ?";
+        boolean Deleted = false;
+
+        try {
+            Class.forName(path);
+            conn = DriverManager.getConnection(url, username, password);
+            pstmt = conn.prepareStatement(deleteQuery);
+            pstmt.setInt(1, jno);
+
+            int rowsAffected = pstmt.executeUpdate();
+            if (rowsAffected > 0) {
+                Deleted = true;
+            }
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeResources();
+        }
+
+        return Deleted;
+    }
+    }
+
 
 
 

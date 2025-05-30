@@ -29,5 +29,10 @@ public class IPLService {
 		    return dao.getPlayersByTeam(teamName);
 		}
 		
+		public boolean deletePlayer(int jno) {
+		    IPLDAO dao = new IPLDAO();
+		    return dao.deletePlayerByJno(jno);
+		}
+		
 	}
 
